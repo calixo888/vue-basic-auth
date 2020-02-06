@@ -5,7 +5,7 @@
       welcome {{this.loggedInUser.name}}
     </div>
     <div v-else="loggedIn">
-      ew go <router-link to="/login/">login</router-link>
+      You are not logged in. <router-link to="/login/">Login here</router-link>
     </div>
   </div>
 </template>
