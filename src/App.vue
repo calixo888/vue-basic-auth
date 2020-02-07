@@ -19,9 +19,11 @@ export default {
     }
   },
   methods: {
+    // Will update login with whatever value is provided -> used for login/logout/register
     updateLoggedIn: function(value) {
       this.loggedIn = value;
     },
+    // Will update current logged in user with corresponding data
     updateLoggedInUser: function(value) {
       this.loggedInUser = value;
     },

@@ -30,13 +30,18 @@ export default {
     }
   },
   methods: {
+    // Registering and updating props and user data
     registerSubmit: function() {
+      // Pushing user data to Firebase
       this.$http.post("https://vue-basic-auth.firebaseio.com/users.json", this.user).then((data) => {
         this.submitted = true;
       });
 
+      // Updating logged in prop as well as logged in user data
       this.$emit("update:loggedIn", true);
       this.$emit("update:loggedInUser", this.user);
+
+      // Pushing back to homepage
       this.$router.push("/");
     },
   }
